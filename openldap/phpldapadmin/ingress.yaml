@@ -8,7 +8,7 @@ metadata:
   name: ingress-phpldapadmin
 spec:
   rules:
-  - host: ldap.zdgt.com
+  - host: openldap.zdgt.com
     http:
       paths:
       - backend:
