@@ -2,7 +2,7 @@ global:
   edition: ce
   hosts:
     domain: zdgt.com
-    externalIP: "https://gitlab.devops.nari"
+    externalIP: 'https://gitlab.devops.nari'
   shell:
     port: 22
   ingress:
@@ -45,8 +45,8 @@ gitlab:
             host: "openldap.openldap"
             port: "389"
             uid: "uid"
-            bind_dn: "cn=admin\,dc=openldap\,dc=com
-            password: "admin
+            bind_dn: "cn=admin\,dc=openldap\,dc=com"
+            password: "admin"
             encryption: "plain"
   gitaly:
     image:
@@ -67,5 +67,3 @@ shared-secrets:
   selfsign:
     image:
       repository: registry.cn-qingdao.aliyuncs.com/imageofout/cfssl-self-sign
-
-
