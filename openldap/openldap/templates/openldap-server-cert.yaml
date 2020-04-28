@@ -10,3 +10,4 @@ spec:
     name: sample-selfsigned
     kind: ClusterIssuer
   commonName: {{ .Values.env.LDAP_DOMAIN }}
+{{- end }}
