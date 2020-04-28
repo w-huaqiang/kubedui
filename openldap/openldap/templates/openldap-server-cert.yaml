@@ -4,10 +4,10 @@ kind: Certificate
 metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
-  name: {{ .Values.secret }}
+  name: {{ .Values.tls.secret }}
   namespace: openldap
 spec:
-  secretName: {{ .Values.secret }}
+  secretName: {{ .Values.tls.secret }}
   issuerRef:
     name: sample-selfsigned
     kind: ClusterIssuer
