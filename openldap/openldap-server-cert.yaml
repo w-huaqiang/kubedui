@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: hq-opnldap
+  namespace: openldap
+spec:
+  secretName: hq-openldap
+  issuerRef:
+    name: sample-selfsigned
+    kind: ClusterIssuer
+  commonName: hqopenldap.com
