@@ -41,13 +41,13 @@ gitlab:
       ldap:
         servers:
           main:
-            label: "LDAP"
-            host: "openldap.openldap"
-            port: "389"
-            uid: "uid"
-            bind_dn: "cn=admin\,dc=openldap\,dc=com"
-            password: "admin"
-            encryption: "plain"
+            label: 'LDAP'
+            host: 'openldap.openldap'
+            port: '389'
+            uid: 'uid'
+            bind_dn: 'cn=admin\,dc=openldap\,dc=com'
+            password: 'admin'
+            encryption: 'plain'
   gitaly:
     image:
       repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitaly
