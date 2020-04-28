@@ -1,0 +1,71 @@
+global:
+  edition: ce
+  hosts:
+    domain: zdgt.com
+    externalIP: "https://gitlab.devops.nari"
+  shell:
+    port: 22
+  ingress:
+    configureCertmanager: false
+  kubectl:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/kubectl
+  certificates:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/alpine-certificates
+certmanager:
+  install: false
+  createCustomResource: false
+upgradeCheck:
+  enabled: false
+prometheus:
+  install: false
+gitlab-runner:
+  install: false
+
+gitlab:
+  global:
+    communityImages:
+      sidekiq:
+        repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-sidekiq-ce
+      task-runner:
+        repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-task-runner-ce
+      migrations:
+        repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-task-runner-ce
+      unicorn:
+        repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-webservice-ce
+        workhorse:
+          repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-workhorse-ce
+  unicorn:
+    global:
+      ldap:
+        servers:
+          main:
+            label: "LDAP"
+            host: "openldap.openldap"
+            port: "389"
+            uid: "uid"
+            bind_dn: "cn=admin\,dc=openldap\,dc=com
+            password: "admin
+            encryption: "plain"
+  gitaly:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitaly
+  gitlab-shell:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-shell
+  gitlab-exporter:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-exporter
+
+registry:
+  image:
+    repository: registry.cn-qingdao.aliyuncs.com/imageofout/gitlab-container-registry
+
+
+shared-secrets:
+  selfsign:
+    image:
+      repository: registry.cn-qingdao.aliyuncs.com/imageofout/cfssl-self-sign
+
+
