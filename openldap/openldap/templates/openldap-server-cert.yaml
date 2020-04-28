@@ -2,6 +2,8 @@
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
   name: {{ .Values.secret }}
   namespace: openldap
 spec:
