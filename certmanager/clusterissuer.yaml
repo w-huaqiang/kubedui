@@ -1,0 +1,8 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+  name: sample-selfsigned
+spec:
+  selfSigned: {}
