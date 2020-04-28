@@ -1,11 +1,12 @@
+{{ if .Values.tls.enabled }}
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
-  name: hq-opnldap
+  name: {{ .Values.secret }}
   namespace: openldap
 spec:
-  secretName: hq-openldap
+  secretName: {{ .Values.secret }}
   issuerRef:
     name: sample-selfsigned
     kind: ClusterIssuer
-  commonName: hqopenldap.com
+  commonName: {{ .Values.env.LDAP_DOMAIN }}
