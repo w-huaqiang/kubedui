@@ -8,7 +8,7 @@ metadata:
   name: ingress-phpldapadmin
 spec:
   rules:
-  - host: ldap.devops.nari
+  - host: ldap.zdgt.com
     http:
       paths:
       - backend:
@@ -17,5 +17,5 @@ spec:
         path: /
   tls:
   - hosts:
-    - ldap.devops.nari
+    - openldap.zdgt.com
     secretName: openldap-tls
