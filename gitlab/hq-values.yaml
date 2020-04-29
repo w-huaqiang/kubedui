@@ -22,6 +22,10 @@ prometheus:
   install: false
 gitlab-runner:
   install: false
+nginx-ingress:
+  enabled: false
+registry:
+  enabled: false
 
 gitlab:
   global:
