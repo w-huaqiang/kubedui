@@ -27,5 +27,5 @@ spec:
               value: "636"
             -
               name: PHPLDAPADMIN_HTTPS
-              value: "false"
+              value: "true"
 
