@@ -2,7 +2,7 @@ global:
   edition: ce
   hosts:
     domain: zdgt.com
-    externalIP: 'https://gitlab.devops.nari'
+    externalIP: 'https://gitlab.zdgt.com'
   shell:
     port: 22
   ingress:
