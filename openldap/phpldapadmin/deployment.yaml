@@ -22,9 +22,9 @@ spec:
             -
               name: PHPLDAPADMIN_LDAP_HOSTS
               value: "openldap"
-            # -
-            #   name: PHPLDAPADMIN_LDAP_PORT
-            #   value: "389"
+            -
+              name: PHPLDAPADMIN_LDAP_PORT
+              value: "636"
             -
               name: PHPLDAPADMIN_HTTPS
               value: "false"
